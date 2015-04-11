@@ -3,7 +3,7 @@
     <field name="MODE">WHILE</field>
     <value name="NUMBER">
       <block type="logic_compare" id="27" inline="true">
-        <field name="OP">GT</field>
+        <field name="OP">LT</field>
         <value name="A">
           <block type="sensor_object" id="34">
             <field name="OBJECT">REAR</field>
