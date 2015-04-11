@@ -1,16 +1,26 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="movement_forward" id="1" x="1" y="1">
-    <next>
-      <block type="robot_delay" id="2" inline="true">
-        <value name="DELAY">
-          <block type="math_number" id="3">
-            <field name="NUM">1000</field>
+  <block type="controls_whileUntil" id="20" inline="false" x="2" y="91">
+    <field name="MODE">WHILE</field>
+    <value name="NUMBER">
+      <block type="logic_compare" id="27" inline="true">
+        <field name="OP">GT</field>
+        <value name="A">
+          <block type="sensor_object" id="34">
+            <field name="OBJECT">REAR</field>
           </block>
         </value>
-        <next>
-          <block type="movement_stop" id="4"></block>
-        </next>
+        <value name="B">
+          <block type="math_number" id="41">
+            <field name="NUM">70</field>
+          </block>
+        </value>
       </block>
+    </value>
+    <statement name="DO">
+      <block type="movement_reverse" id="51"></block>
+    </statement>
+    <next>
+      <block type="movement_stop" id="61"></block>
     </next>
   </block>
 </xml>
