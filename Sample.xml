@@ -3,15 +3,15 @@
     <field name="MODE">WHILE</field>
     <value name="NUMBER">
       <block type="logic_compare" id="27" inline="true">
-        <field name="OP">LT</field>
+        <field name="OP">GT</field>
         <value name="A">
           <block type="sensor_object" id="34">
             <field name="OBJECT">REAR</field>
           </block>
         </value>
         <value name="B">
-          <block type="math_number" id="41">
-            <field name="NUM">70</field>
+          <block type="math_number" id="68">
+            <field name="NUM">20</field>
           </block>
         </value>
       </block>
@@ -20,7 +20,7 @@
       <block type="movement_reverse" id="51"></block>
     </statement>
     <next>
-      <block type="movement_stop" id="61"></block>
+      <block type="movement_stutter" id="78"></block>
     </next>
   </block>
 </xml>
