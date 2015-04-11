@@ -1,23 +1,42 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="controls_whileUntil" id="20" inline="false" x="2" y="91">
-    <field name="MODE">WHILE</field>
-    <value name="NUMBER">
-      <block type="logic_compare" id="27" inline="true">
-        <field name="OP">GT</field>
-        <value name="A">
-          <block type="sensor_object" id="34">
-            <field name="OBJECT">REAR</field>
+  <block type="movement_forward" id="306" x="-46" y="1">
+    <next>
+      <block type="robot_delay" id="328" inline="true">
+        <value name="DELAY">
+          <block type="math_number" id="335">
+            <field name="NUM">1000</field>
           </block>
         </value>
-        <value name="B">
-          <block type="math_number" id="68">
-            <field name="NUM">10</field>
+        <next>
+          <block type="movement_reverse" id="316">
+            <next>
+              <block type="robot_delay" id="337" inline="true">
+                <value name="DELAY">
+                  <block type="math_number" id="351">
+                    <field name="NUM">1000</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="movement_stutter" id="326">
+                    <next>
+                      <block type="robot_delay" id="363" inline="true">
+                        <value name="DELAY">
+                          <block type="math_number" id="370">
+                            <field name="NUM">1000</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="movement_stop" id="361"></block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
           </block>
-        </value>
+        </next>
       </block>
-    </value>
-    <statement name="DO">
-      <block type="movement_reverse" id="51"></block>
-    </statement>
+    </next>
   </block>
 </xml>
